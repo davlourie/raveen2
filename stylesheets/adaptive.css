@@ -1,0 +1,162 @@
+@media (max-width: 1400px) {
+  .footer-right {
+    display: none;
+  }
+
+  .bird-img {
+    content: "";
+    position: absolute;
+    right: -120px;
+    width: 150%;
+    aspect-ratio: 1/1;
+    bottom: -10%;
+  }
+
+  .fourth-section {
+    aspect-ratio: 1920/800;
+  }
+
+  .ring-img {
+    top: 50%;
+    left: 50%;
+    width: 130%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .fourth-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    aspect-ratio: initial;
+  }
+
+  .gf-left {
+    width: 100%;
+    aspect-ratio: 1035/700;
+    background-image: url("../img/gf-2.webp");
+  }
+
+  .gf-right {
+    width: 100%;
+    aspect-ratio: 1035/700;
+  }
+
+  .ring-img {
+    background-image: url("../img/ring.svg");
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1/1;
+  }
+
+  .gf-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 5%;
+  }
+
+  .gf-text {
+    font-size: 5dvw;
+  }
+
+  .gf-right {
+    position: relative;
+  }
+
+  .tt-img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .bird-img {
+    width: 170%;
+  }
+}
+
+@media (max-width: 770px) {
+  .gf-left {
+    width: 100%;
+    aspect-ratio: 768/500;
+  }
+
+  .ring-img {
+    width: 76%;
+  }
+
+  .gf-right {
+    width: 100%;
+    aspect-ratio: 768/450;
+  }
+
+  .gf-right {
+    padding-top: 3%;
+    padding-left: 3%;
+  }
+
+  .tt-img {
+    width: 75%;
+  }
+
+  .fifth-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .dc-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .dc-r-top {
+    width: 100%;
+    aspect-ratio: 768/500;
+    font-size: 5dvw;
+    padding-right: 7%;
+    padding-top: 7%;
+    padding-left: 4%;
+    height: auto;
+  }
+
+  .dc-r-bottom {
+    width: 100%;
+    aspect-ratio: 768/400;
+    height: auto;
+  }
+
+  .bird-img {
+    right: -70px;
+    width: 120%;
+    aspect-ratio: 1/1;
+    bottom: 19%;
+  }
+
+  .dc-left {
+    background-color: #000;
+    background-image: url(../img/asx.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 768/450;
+  }
+
+  .gf-text {
+    font-size: 5.5dvw;
+  }
+
+  .footer::after {
+    display: none;
+  }
+}
