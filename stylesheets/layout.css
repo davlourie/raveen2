@@ -72,6 +72,12 @@ video {
   vertical-align: middle;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 iframe {
   border: none;
 }
@@ -334,21 +340,23 @@ textarea:focus {
 }
 
 .third-section {
-  width: 100%;
-  aspect-ratio: 1920/375;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 20px;
+  overflow: hidden;
+  transform-origin: center;
+  width: 100vw;
+  height: 20vw;
+  background-image: url("../img/road.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moveBackground 3s linear infinite;
 }
-
+.third-section-border {
+  width: 100%;
+  height: 100%;
+  border: 4vw solid black;
+  border-left: none;
+  border-right: none;
+  animation: road 4s linear infinite;
+}
 .fourth-section {
   width: 100%;
   display: -webkit-box;
@@ -496,28 +504,28 @@ textarea:focus {
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+  animation: flyAway 5s linear 1 forwards;
+  animation-delay: 5s;
 }
 
 .sixth-section {
-  width: 100%;
-  aspect-ratio: 1920/735;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   overflow: hidden;
+  transform-origin: center;
+  width: 100vw;
+  height: 20vw;
+  background-image: url("../img/rail.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: spriteRail 2s steps(5) infinite;
 }
-
-.sixth-section img {
+.sixth-section-border {
   width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
-  aspect-ratio: 1914/590;
-  height: 88%;
-  top: 6px;
-  position: relative;
+  height: auto;
+  border: 4vw solid black;
+  border-left: none;
+  border-right: none;
+  position: absolute;
+  animation: roads 4s linear infinite;
 }
 
 .seventh-section {
@@ -535,6 +543,7 @@ textarea:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .ss-box {
@@ -550,17 +559,31 @@ textarea:focus {
 
 .eight-section {
   width: 100%;
-  height: 200%;
+  height: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+  z-index: -1;
 }
 
 .eight-section img {
   width: 80%;
-  top: -25%;
+  height: -150%;
+  display: flex;
+  top: -150%;
   position: relative;
   z-index: -1;
+  margin-top: -10%;
+  margin-bottom: -20%;
+  overflow: hidden;
+  animation: ringrotate 5s linear infinite;
+}
+
+.ninth-section {
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer {
@@ -594,6 +617,9 @@ textarea:focus {
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 3s ease;
 }
 
 .footer::before {
@@ -608,6 +634,17 @@ textarea:focus {
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+
+.footer:hover::after {
+  opacity: 0;
+}
+
+.footer:hover::before {
+  opacity: 0;
 }
 
 .footer-left {

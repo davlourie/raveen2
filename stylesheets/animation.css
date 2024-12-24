@@ -12,7 +12,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -26,30 +26,94 @@
 }
 @keyframes moveText {
   0% {
-    transform: translateX(0);
+    transform: translate(0, 0);
   }
   10% {
-    transform: translateX(10%);
-  }
-  20% {
-    transform: translateyY(20%);
+    transform: translate(10%, 30%);
   }
   30% {
-    transform: translateyX(30%);
+    transform: translate(30%, 500%);
   }
   40% {
-    transform: translateyY(50%);
+    transform: translate(50%, 200%);
   }
   50% {
-    transform: translateyY(10%);
+    transform: translate(10%, 80%);
   }
   60% {
-    transform: translateyX(100%);
+    transform: translate(200%, 800%);
   }
   80% {
-    transform: translateyY(80%);
+    transform: translate(100%, 100%);
   }
   100% {
-    transform: translateyX(20%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes road {
+  0% {
+    border: 0vw solid black;
+    border-left: none;
+    border-right: none;
+  }
+  50% {
+    border: 10vw solid black;
+    border-left: none;
+    border-right: none;
+  }
+  100% {
+    border: 0vw solid black;
+    border-left: none;
+    border-right: none;
+  }
+}
+@keyframes moveBackground {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+
+@keyframes flyAway {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150vw);
+  }
+}
+@keyframes roads {
+  0% {
+    border: 0vw solid black;
+    border-left: none;
+    border-right: none;
+  }
+  50% {
+    border: 10vw solid black;
+    border-left: none;
+    border-right: none;
+  }
+  100% {
+    border: 0vw solid black;
+    border-left: none;
+    border-right: none;
+  }
+}
+@keyframes spriteRail {
+  0% {
+    background-position: 0 0; /* Начальное положение */
+  }
+  100% {
+    background-position: -500%; /* 5 кадров, полный проход */
+  }
+}
+@keyframes diskrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
